@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Fondo animado con cambio de colores */
+body {
+    background: linear-gradient(
+        180deg, 
+        rgba(255, 0, 13, 0.692) 0%, 
+        rgba(3, 70, 117, 0.795) 25%, 
+        rgba(6, 168, 101, 0.719) 50%, 
+        rgba(226, 219, 219, 0.856) 75%, 
+        rgba(251, 255, 0, 0.664) 100%
+    );
+    
+    background-size: 800% 800%; /* Se aumenta el tamaño para hacer la animación más visible */
+    animation: gradientMove 90s infinite alternate ease-in-out; /* Más lento */
+
+    background-attachment: fixed; /* Mantiene el fondo fijo mientras se scrollea */
+    
+    min-height: 200vh; /* Permite scroll */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Asegura que el contenido inicie arriba */
+    padding-top: 50px; /* Espacio superior */
+}
+
+/* Animación del fondo */
+@keyframes gradientMove {
+    0% { background-position: 0% 0%; }
+    50% { background-position: 50% 100%; } /* Movimiento más dinámico */
+    100% { background-position: 100% 0%; }
+}
+
+/* Contenedor de la imagen */
+.image-container {
+    position: relative;
+    width: 75%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Imagen con efecto de fade */
+.image-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 2s ease-in-out;
+    
+    /* Efecto de desvanecimiento en la parte inferior */
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 85%, rgba(0, 0, 0, 0) 100%);
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 85%, rgba(0, 0, 0, 0) 100%);
+}
+
+
+/* Animación de fade-in al cargar */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.content {
+    width: 80%;
+    max-width: 900px;
+    text-align: center;
+    margin-top: 50px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-image {
+    width: 300px;  /* Tamaño fijo */
+    height: 300px; /* Tamaño fijo */
+    object-fit: cover; /* Mantiene la proporción sin deformar */
+    border-radius: 10px; /* Bordes redondeados (opcional) */
+}
