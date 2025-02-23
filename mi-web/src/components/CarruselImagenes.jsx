@@ -1,5 +1,7 @@
 import { useState } from "react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 import imagen1 from "../assets/imagen1.jpeg";
 import imagen2 from "../assets/imagen2.jpeg";
@@ -11,41 +13,50 @@ import imagen6 from "../assets/imagen6.jpeg";
 const images = [imagen1, imagen2, imagen3, imagen4, imagen5, imagen6];
 
 export default function SidebarCarousel() {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const visibleImages = 4; // Cantidad de imágenes visibles
-
-  const prevImage = () => {
-    setCurrentIndex((prev) => (prev - 1 + images.length) % images.length);
-  };
-
-  const nextImage = () => {
-    setCurrentIndex((prev) => (prev + 1) % images.length);
+  var settings = {
+    dots: true,
+    infinite: true,
+    speed: 1500,
+    slidesToShow: 3,
+    slidesToScroll: 3,
+    initialSlide: 0,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ],
   };
 
   return (
-    <div className="fixed right-5 top-1/2 transform -translate-y-1/2 w-48 bg-gray-800 rounded-lg shadow-lg flex flex-col items-center p-4">
-      <button onClick={prevImage} className="mb-2 text-white">
-        <ChevronLeft size={24} />
-      </button>
-
-      <div className="flex gap-2 overflow-hidden w-40">
-        {Array.from({ length: visibleImages }).map((_, index) => {
-          const imgIndex = (currentIndex + index) % images.length;
-          return (
-            <img
-              key={imgIndex}
-              src={images[imgIndex]}
-              alt="carousel"
-              className="carousel-image"
-            />
-          );
-        })}
-      </div>
-
-      <button onClick={nextImage} className="mt-2 text-white">
-        <ChevronRight size={24} />
-      </button>
+    <div className="slider-container w-400 mx-auto mt-100">
+      <Slider {...settings}>
+        {images.map((image, index) => (
+          <div key={index}>
+            <img src={image} alt={`carousel-${index}`} className="w-125 h-70 rounded-lg object-cover border-4 border-black" />
+          </div>
+        ))}
+      </Slider>
     </div>
   );
 }
-
