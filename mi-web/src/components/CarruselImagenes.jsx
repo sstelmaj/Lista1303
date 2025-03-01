@@ -15,16 +15,25 @@ const images = [imagen1, imagen2, imagen3, imagen4, imagen5, imagen6];
 export default function SidebarCarousel() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedImage, setSelectedImage] = useState(null);
-  const [isDragging, setIsDragging] = useState(false); // Para detectar el deslizamiento
+  const [isDragging, setIsDragging] = useState(false);
 
-  var settings = {
+  const settings = {
     dots: true,
     infinite: false,
     speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 3,
+    slidesToShow: 5,  // Aquí es donde debes cambiarlo a 5
+    slidesToScroll: 5,
     initialSlide: 0,
     responsive: [
+      {
+        breakpoint: 1280, // Agregamos un breakpoint para pantallas grandes
+        settings: {
+          slidesToShow: 5, // Ahora se mostrarán 5 imágenes en pantallas grandes
+          slidesToScroll: 5,
+          infinite: true,
+          dots: true
+        }
+      },
       {
         breakpoint: 1024,
         settings: {
@@ -39,7 +48,7 @@ export default function SidebarCarousel() {
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2,
-          initialSlide: 2
+          initialSlide: 0
         }
       },
       {
@@ -50,38 +59,32 @@ export default function SidebarCarousel() {
         }
       }
     ],
-    beforeChange: () => {
-      setIsDragging(true); // El usuario está comenzando a deslizar
-    },
-    afterChange: () => {
-      setIsDragging(false); // El deslizamiento ha terminado
-    }
   };
 
-  // Función para manejar el clic en la imagen
   const handleImageClick = (image) => {
-    if (!isDragging) { // Solo abre el modal si no se está deslizando
+    if (!isDragging) {
       setSelectedImage(image);
       setIsModalOpen(true);
     }
   };
 
-  // Función para cerrar el modal
   const closeModal = () => {
     setIsModalOpen(false);
   };
 
   return (
-    <div className="slider-container w-300 mx-auto mt-10">
+    <div className="slider-container w-full max-w-xl mx-auto">
       <Slider {...settings}>
         {images.map((image, index) => (
           <div key={index} className="px-2">
-            <img
-              src={image}
-              alt={`carousel-${index}`}
-              className="w-full h-70 rounded-lg object-cover border-4 border-black cursor-pointer"
-              onClick={() => handleImageClick(image)} // Solo abre el modal si no se está deslizando
-            />
+            <div className="relative w-full max-w-sm p-4 bg-gray-900 rounded-xl shadow-lg">
+              <img
+                src={image}
+                alt={`carousel-${index}`}
+                className="w-full h-56 md:w-64 rounded-lg object-cover border-2 border-gray-700 cursor-pointer transition-transform duration-300 hover:scale-105"
+                onClick={() => handleImageClick(image)}
+              />
+            </div>
           </div>
         ))}
       </Slider>
@@ -89,19 +92,14 @@ export default function SidebarCarousel() {
       {/* Modal */}
       {isModalOpen && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
-          <div className="bg-white p-4 rounded-lg relative">
-            {/* Botón de cierre con fondo blanco circular */}
+          <div className="bg-white p-4 rounded-lg relative max-w-2xl">
             <button
-              className="absolute top-4 right-4 text-black text-4xl font-bold bg-white rounded-full p-2 shadow-md border-4 border-black cursor-pointer"
+              className="absolute top-4 right-4 text-black text-2xl font-bold bg-white rounded-full p-2 shadow-md border border-black cursor-pointer"
               onClick={closeModal}
             >
-              X
+              ✖
             </button>
-            <img
-              src={selectedImage}
-              alt="full-size"
-              className="max-w-400 max-h-200 rounded-lg"
-            />
+            <img src={selectedImage} alt="Imagen" className="max-w-full max-h-[80vh] rounded-lg" />
           </div>
         </div>
       )}

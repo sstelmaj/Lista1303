@@ -27,8 +27,56 @@ body {
 /* Animación del fondo */
 @keyframes gradientMove {
     0% { background-position: 0% 0%; }
-    50% { background-position: 50% 100%; } /* Movimiento más dinámico */
+    50% { background-position: 50% 100%; }
     100% { background-position: 100% 0%; }
+}
+
+.animate-fadeIn {
+    animation: fadeIn 2s ease-in-out;
+}
+
+.text-gradient-border {
+  /* Gradiente de fondo igual al del body */
+  background: linear-gradient(
+      180deg, 
+      rgba(255, 0, 13, 0.61) 0%, 
+      rgba(3, 70, 117, 0.795) 25%, 
+      rgba(6, 168, 101, 0.719) 50%, 
+      rgba(226, 219, 219, 0.856) 75%, 
+      rgba(251, 255, 0, 0.664) 100%
+  );
+  background-size: 800% 800%;
+  animation: gradientMove 10s infinite alternate ease-in-out, fadeIn 2s ease-in-out;
+  
+  /* Hacer que el gradiente se aplique al texto */
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  /* Agregar trazo (borde) al texto */
+  -webkit-text-stroke: 3px rgb(30,41,59);
+  /* Nota: text-stroke no está estandarizado en todos los navegadores,
+     pero funciona en Chrome, Safari y Edge. */
+}
+
+.content-container {
+    display: flex-end;
+    background-color: rgb(30,41,59);
+    height: 2000px;
+    width: 1300px;
+    padding-left: 50px;
+    padding-right: 50px;
+    border-radius: 50px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.slick-prev:before {
+    color: red;
+}
+
+.slick-next:before {
+    color: red;
 }
 
 /* Contenedor de la imagen */
