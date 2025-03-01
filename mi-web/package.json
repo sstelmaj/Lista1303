@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "cross-env TAILWIND_DISABLE_OXIDE=1 vite build",
+    "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"
   },
@@ -33,8 +33,9 @@
     "tailwindcss": "^4.0.6",
     "vite": "^6.1.0"
   },
-  "engines": {
-  "node": "22.x"
+  "optionalDependencies": {
+  "@tailwindcss/oxide-linux-x64-gnu": "^4.0.1",
+  "lightningcss-linux-x64-gnu": "^1.29.1"
   },
   "description": "This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.",
   "main": "eslint.config.js",

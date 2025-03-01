@@ -20,9 +20,4 @@ export default defineConfig({
     host: 'localhost',
     port: 5173,
   },
-  resolve: {
-    alias: {
-      '@tailwindcss/oxide': resolve(__dirname, 'dummy-tailwind-oxide.js'),
-    },
-  },
 });
