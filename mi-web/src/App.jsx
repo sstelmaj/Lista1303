@@ -24,35 +24,34 @@ function App() {
 
                 <div className="bg-[rgb(30,41,59)] w-[95%] max-w-[900px] p-4 sm:p-8 rounded-2xl my-4 sm:my-10 mx-auto flex flex-col items-center text-center overflow-hidden">
                     <div>
-                        <p className='text-2xl sm:text-4xl text-white text-center p-4 sm:p-10 mt-5 font-medium'>
+                        <p className='text-2xl sm:text-4xl text-white text-center sm:p-10 mt-5 font-medium'>
                           🏛️ ¿Quiénes somos?
                         </p>
-                        <p className='text-lg sm:text-xl md:text-2xl lg:text-3xl text-white text-center p-4 sm:p-10 mt-5 font-medium'>
+                        <p className='text-lg sm:text-xl md:text-2xl lg:text-3xl text-white text-center mt-5 font-medium'>
                             Somos una lista que respalda al compañero Mario Díaz como candidato a la intendencia de Paysandú el próximo 11 de Mayo de 2025. <br /> <br />
                             Para que el próximo intendente del departamento represente los verdaderos valores de los sanduceros. <br /> <br />
                             Así como recuperar el gobierno departamental con personas que dediquen su esfuerzo y atención a la gente trabajadora y emprendedora tan olvidada en estos tiempos.
                         </p>
-                        <hr className="my-6 sm:my-10 border-t-2 border-gray-700 mx-auto w-3/4" />
                     </div>
-                    <div>
-                        <p className="text-2xl sm:text-4xl text-white text-center p-4 sm:p-10 mt-5 font-medium">
-                          🤝 Conócenos
-                        </p>
-                    </div>
-                    {/* Carrusel de imágenes */}
-                    <ImageCarousel />
                     <hr className="my-6 sm:my-10 border-t-2 border-gray-700 mx-auto w-3/4" />
-                    <div>
-                        <p className="text-2xl sm:text-4xl text-white text-center p-4 sm:p-10 mt-5 font-medium">
+                    <div className="w-full max-w-full">
+                        <p className="text-2xl sm:text-4xl text-white text-center font-medium">
+                            🤝 Conócenos
+                        </p>
+                        <ImageCarousel/>
+                    </div>
+                    <hr className="my-6 sm:my-10 border-t-2 border-gray-700 mx-auto w-3/4" />
+                    <div className="w-full max-w-full">
+                        <p className="text-2xl sm:text-4xl text-white text-center font-medium">
                           🎥 Videos
                         </p>
                         <VideoGallery />
-                        <hr className="my-6 sm:my-10 border-t-2 border-gray-700 mx-auto w-3/4" />
                     </div>
+                    <hr className="my-6 sm:my-10 border-t-2 border-gray-700 mx-auto w-3/4" />
                     <Actividades />
                     <hr className="my-6 sm:my-10 border-t-2 border-gray-700 mx-auto w-3/4" />
                     <div>
-                        <p className='text-2xl sm:text-4xl text-white text-center p-4 sm:p-10 font-medium'>
+                        <p className='text-2xl sm:text-4xl text-white text-center sm:p-10 font-medium'>
                             📢 Más
                         </p>
                         <p className='text-lg sm:text-xl md:text-2xl lg:text-3xl text-white text-center p-4 sm:p-10 mt-5 font-medium'>

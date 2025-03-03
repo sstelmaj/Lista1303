@@ -10,7 +10,16 @@ import imagen4 from "../assets/imagen4.jpeg";
 import imagen5 from "../assets/imagen5.jpeg";
 import imagen6 from "../assets/imagen6.jpeg";
 
-const images = [imagen1, imagen2, imagen3, imagen4, imagen5, imagen6];
+import imagen7 from "../assets/imagen3-3(1).jpeg"
+import imagen8 from "../assets/imagen3-3(2).jpeg"
+import imagen9 from "../assets/imagen3-3(3).jpeg"
+import imagen10 from "../assets/imagen3-3(4).jpeg"
+import imagen11 from "../assets/imagen3-3(5).jpeg"
+import imagen12 from "../assets/imagen3-3(6).jpeg"
+import imagen13 from "../assets/imagen3-3(7).jpeg"
+import imagen14 from "../assets/imagen3-3(8).jpeg"
+
+const images = [imagen7, imagen8, imagen9, imagen10, imagen11, imagen12, imagen13, imagen14, imagen1, imagen2, imagen3, imagen4, imagen5, imagen6];
 
 export default function SidebarCarousel() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -19,6 +28,7 @@ export default function SidebarCarousel() {
 
   const settings = {
     dots: true,
+    arrows: false,
     infinite: false,
     speed: 500,
     slidesToShow: 5,  // En pantallas grandes se mostrarán 5 imágenes
@@ -73,7 +83,7 @@ export default function SidebarCarousel() {
   };
 
   return (
-    <div className="slider-container w-full max-w-4xl mx-auto">
+    <div className="slider-container w-full max-w-4xl mx-auto p-4 sm:p-10">
       <Slider {...settings}>
         {images.map((image, index) => (
           <div key={index} className="px-2">

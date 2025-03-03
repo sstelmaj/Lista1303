@@ -78,7 +78,7 @@ export default function Actividades() {
   };
 
   return (
-    <section className="w-full py-10 bg-gray-900 text-white">
+    <section className="w-full py-10 bg-gray-900 text-white rounded-2xl">
       <h2 className="text-4xl sm:text-5xl font-bold text-center mb-6">📌 Actividades</h2>
       <div className="container mx-auto">
         <Slider {...settings}>
