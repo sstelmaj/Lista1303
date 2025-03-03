@@ -21,18 +21,18 @@ export default function SidebarCarousel() {
     dots: true,
     infinite: false,
     speed: 500,
-    slidesToShow: 5,  // Aquí es donde debes cambiarlo a 5
+    slidesToShow: 5,  // En pantallas grandes se mostrarán 5 imágenes
     slidesToScroll: 5,
     initialSlide: 0,
     responsive: [
       {
-        breakpoint: 1280, // Agregamos un breakpoint para pantallas grandes
+        breakpoint: 1280, // Pantallas grandes
         settings: {
-          slidesToShow: 5, // Ahora se mostrarán 5 imágenes en pantallas grandes
+          slidesToShow: 5,
           slidesToScroll: 5,
           infinite: true,
-          dots: true
-        }
+          dots: true,
+        },
       },
       {
         breakpoint: 1024,
@@ -40,24 +40,24 @@ export default function SidebarCarousel() {
           slidesToShow: 3,
           slidesToScroll: 3,
           infinite: true,
-          dots: true
-        }
+          dots: true,
+        },
       },
       {
         breakpoint: 600,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2,
-          initialSlide: 0
-        }
+          initialSlide: 0,
+        },
       },
       {
         breakpoint: 480,
         settings: {
           slidesToShow: 1,
-          slidesToScroll: 1
-        }
-      }
+          slidesToScroll: 1,
+        },
+      },
     ],
   };
 
@@ -73,15 +73,15 @@ export default function SidebarCarousel() {
   };
 
   return (
-    <div className="slider-container w-full max-w-xl mx-auto">
+    <div className="slider-container w-full max-w-4xl mx-auto">
       <Slider {...settings}>
         {images.map((image, index) => (
           <div key={index} className="px-2">
-            <div className="relative w-full max-w-sm p-4 bg-gray-900 rounded-xl shadow-lg">
+            <div className="relative w-full p-4 bg-gray-900 rounded-xl shadow-lg">
               <img
                 src={image}
                 alt={`carousel-${index}`}
-                className="w-full h-56 md:w-64 rounded-lg object-cover border-2 border-gray-700 cursor-pointer transition-transform duration-300 hover:scale-105"
+                className="w-full h-48 lg:h-64 rounded-lg object-cover border-2 border-gray-700 cursor-pointer transition-transform duration-300 hover:scale-105"
                 onClick={() => handleImageClick(image)}
               />
             </div>
@@ -99,7 +99,11 @@ export default function SidebarCarousel() {
             >
               ✖
             </button>
-            <img src={selectedImage} alt="Imagen" className="max-w-full max-h-[80vh] rounded-lg" />
+            <img
+              src={selectedImage}
+              alt="Imagen"
+              className="max-w-full max-h-[80vh] rounded-lg"
+            />
           </div>
         </div>
       )}
