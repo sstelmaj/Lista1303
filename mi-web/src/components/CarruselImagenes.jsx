@@ -29,7 +29,7 @@ export default function SidebarCarousel() {
   const settings = {
     dots: true,
     arrows: false,
-    infinite: false,
+    infinite: true,
     speed: 500,
     slidesToShow: 5,  // En pantallas grandes se mostrarán 5 imágenes
     slidesToScroll: 5,

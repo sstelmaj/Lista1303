@@ -38,7 +38,7 @@ export default function VideoGallery() {
   const settings = {
     dots: true,
     arrows: false,
-    infinite: false,
+    infinite: true,
     speed: 500,
     slidesToShow: 2, // En pantallas grandes se mostrarán 5 videos
     slidesToScroll: 2,
