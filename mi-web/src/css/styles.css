@@ -2,11 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Fondo animado con cambio de colores */
+#root {
+    width: 100%;
+}
+
+
 body {
     background: linear-gradient(
         180deg, 
-        rgba(255, 0, 13, 0.61) 0%, 
+        rgba(163, 117, 119, 0.61) 0%, 
         rgba(3, 70, 117, 0.795) 25%, 
         rgba(6, 168, 101, 0.719) 50%, 
         rgba(226, 219, 219, 0.856) 75%, 
@@ -22,7 +26,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start; /* Asegura que el contenido inicie arriba */
+    //justify-content: flex-start; /* Asegura que el contenido inicie arriba */
     padding-top: 50px; /* Espacio superior */
 }
 
@@ -65,13 +69,14 @@ body {
     display: flex-end;
     background-color: rgb(30,41,59);
     height: 2000px;
-    width: 1300px;
+    width: 100vh; /* Asegura que el contenedor no exceda el ancho de la pantalla */
+    max-width: 100%; /* Limita el ancho máximo */
     padding-left: 50px;
     padding-right: 50px;
     border-radius: 50px;
     margin-top: 100px;
     margin-bottom: 100px;
-}
+  }
 
 .slick-prev:before {
     color: red;
@@ -82,12 +87,16 @@ body {
 }
 
 /* Contenedor de la imagen */
-.image-container {
-    position: relative;
-    width: 75%;
-    max-width: 600px;
-    margin: 0 auto;
-}
+.image-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 2s ease-in-out;
+  
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 85%, rgba(0, 0, 0, 0) 100%);
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 85%, rgba(0, 0, 0, 0) 100%);
+  }
 
 /* Imagen con efecto de fade */
 .image-container img {
