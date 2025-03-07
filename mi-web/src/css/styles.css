@@ -43,7 +43,7 @@ body {
 
 .text-gradient-border {
   /* Gradiente de fondo igual al del body */
-  background: linear-gradient(
+  text: linear-gradient(
       180deg, 
       rgba(255, 0, 13, 0.61) 0%, 
       rgba(3, 70, 117, 0.795) 25%, 
@@ -55,8 +55,8 @@ body {
   animation: gradientMove 10s infinite alternate ease-in-out, fadeIn 2s ease-in-out;
   
   /* Hacer que el gradiente se aplique al texto */
-  -webkit-background-clip: text;
-  background-clip: text;
+  -webkit-text-clip: text;
+  text-clip: text;
   -webkit-text-fill-color: transparent;
 
   /* Agregar trazo (borde) al texto */

@@ -3,28 +3,37 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
+
+
+
 const videos = [
   {
     id: 1,
-    title: "Video 4",
+    title: "¿Que necesita Paysandú?",
     thumbnail: "https://img.youtube.com/vi/yWqFxp_6jFo/hqdefault.jpg",
-    url: "https://www.youtube.com/embed/yWqFxp_6jFo"
+    url: "https://www.youtube.com/embed/yWqFxp_6jFo?si=75dZxH4X9Qw7wePB"
+  },
+  {
+    id: 2,
+    title: "Presupuesto participativo",
+    thumbnail: "https://img.youtube.com/vi/X6LRoHMp7ww/hqdefault.jpg",
+    url: "https://www.youtube.com/embed/X6LRoHMp7ww"
   },
   
   {
-    id: 2,
+    id: 3,
     title: "Video 1",
     thumbnail: "https://img.youtube.com/vi/QqYSqYv--Oo/hqdefault.jpg",
     url: "https://www.youtube.com/embed/QqYSqYv--Oo?si=hReQCoBDlAa1YQI1"
   },
   {
-    id: 3,
+    id: 4,
     title: "Video 2",
     thumbnail: "https://img.youtube.com/vi/xZLI0W_hYT8/hqdefault.jpg",
     url: "https://www.youtube.com/embed/xZLI0W_hYT8?si=wKhKHLnvgsrKLIhL"
   },
   {
-    id: 4,
+    id: 5,
     title: "Video 3",
     thumbnail: "https://img.youtube.com/vi/5eO6dLjiGXU/hqdefault.jpg",
     url: "https://www.youtube.com/embed/5eO6dLjiGXU?si=wbW20z-IS3RSnzxb"

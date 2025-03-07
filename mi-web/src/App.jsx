@@ -14,7 +14,7 @@ function App() {
             <main >
                 {/* Imagen principal */}
                 <div className="flex justify-center mb-5 px-4">
-                    <h1 className="text-xl sm:text-4xl font-bold text-center drop-shadow-lg animate-fadeIn text-gradient-border max-w-[90%] sm:max-w-[600px]">
+                    <h1 className="text-xl sm:text-4xl font-bold text-center drop-shadow-lg animate-fadeIn max-w-[90%] sm:max-w-[600px]">
                         ¡Bienvenid@ a la página de la lista 1303 DEFRENTE de Paysandú!<br /> <br /> 
                     </h1>
                 </div>

@@ -7,6 +7,7 @@ import actividad1 from "../assets/actividad1.jpeg";
 import actividad2 from "../assets/actividad2.jpeg";
 import actividad3 from "../assets/actividad3.jpeg";
 import actividad4 from "../assets/actividad4.jpeg";
+import actividad5 from "../assets/actividad07-03-25.jpeg";
 
 export default function Actividades() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -15,27 +16,34 @@ export default function Actividades() {
   const actividades = [
     {
       id: 1,
+      titulo: "De frente mano a mano con la gente",
+      fecha: "06 de Marzo, 07 de Marzo, 08 de Marzo 2025",
+      descripcion: "Un encuentro para conocer la lista y sus propuestas.",
+      imagen: actividad5,
+    },
+    {
+      id: 2,
       titulo: "Jornada de militancia",
       fecha: "20, 21 y 22 de Febrero, 2025",
       descripcion: "Un encuentro para conocer la lista y sus propuestas.",
       imagen: actividad1,
     },
     {
-      id: 2,
+      id: 3,
       titulo: "Jornada de militancia",
       fecha: "22 de Febrero, 2025",
       descripcion: "Un encuentro para conocer la lista y sus propuestas.",
       imagen: actividad2,
     },
     {
-      id: 3,
+      id: 4,
       titulo: "Jornada de militancia",
       fecha: "24 de Febrero, 2025",
       descripcion: "Un encuentro para conocer la lista y sus propuestas.",
       imagen: actividad3,
     },
     {
-      id: 4,
+      id: 5,
       titulo: "Abrimos las puertas de la casa a todos",
       fecha: "26 de Febrero, 2025",
       descripcion: "Inauguramos nuestro lugar de encuentro, reflexión y militancia.",
@@ -79,7 +87,7 @@ export default function Actividades() {
 
   return (
     <section className="w-full py-10 bg-gray-900 text-white rounded-2xl">
-      <h2 className="text-4xl sm:text-5xl font-bold text-center mb-6">📌 Actividades</h2>
+      <h2 className="text-4xl sm:text-5xl font-bold text-center mb-6">📌 Actividades y noticias</h2>
       <div className="container mx-auto">
         <Slider {...settings}>
           {actividades.map((actividad) => (
