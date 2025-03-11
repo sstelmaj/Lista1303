@@ -20,7 +20,7 @@ export default function Actividades() {
       titulo: "De frente mano a mano con la gente",
       fecha: "11, 12, 13 y 14 de Marzo 2025",
       descripcion: "Un encuentro con los vecinos de diferentes barrios.",
-      imagen: actividad5,
+      imagen: actividad6,
     },
     {
       id: 2,
