@@ -3,37 +3,68 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-
-
-
 const videos = [
+
+  //Videos 10/03/25
   {
     id: 1,
+    title: "Intendente Mario Diaz",
+    thumbnail: "https://img.youtube.com/vi/Kc3FJwpFKHA/hqdefault.jpg",
+    url: "https://www.youtube.com/embed/Kc3FJwpFKHA"
+  },
+  {
+    id: 2,
+    title: "Nuestro proyecto político",
+    thumbnail: "https://img.youtube.com/vi/f1fqZ1Y8Mpc/hqdefault.jpg",
+    url: "https://www.youtube.com/embed/f1fqZ1Y8Mpc"
+  },
+  {
+    id: 3,
+    title: "¿Dónde van los fondos de Paysandú?",
+    thumbnail: "https://img.youtube.com/vi/7Ad-u2gP9UM/hqdefault.jpg",
+    url: "https://www.youtube.com/embed/7Ad-u2gP9UM"
+  },
+  {
+    id: 4,
+    title: "¿Qué necesitamos los sanduceros?",
+    thumbnail: "https://img.youtube.com/vi/dkdUFePIOsI/hqdefault.jpg",
+    url: "https://www.youtube.com/embed/dkdUFePIOsI"
+  },
+  {
+    id: 5,
+    title: "¿Qué queremos hacer?",
+    thumbnail: "https://img.youtube.com/vi/lnZ--IB8O_8/hqdefault.jpg",
+    url: "https://www.youtube.com/embed/lnZ--IB8O_8"
+  },
+  // ---------------------------------------------------------------------------------------
+
+  {
+    id: 6,
     title: "¿Que necesita Paysandú?",
     thumbnail: "https://img.youtube.com/vi/yWqFxp_6jFo/hqdefault.jpg",
     url: "https://www.youtube.com/embed/yWqFxp_6jFo?si=75dZxH4X9Qw7wePB"
   },
   {
-    id: 2,
+    id: 7,
     title: "Presupuesto participativo",
     thumbnail: "https://img.youtube.com/vi/X6LRoHMp7ww/hqdefault.jpg",
     url: "https://www.youtube.com/embed/X6LRoHMp7ww"
   },
   
   {
-    id: 3,
+    id: 8,
     title: "Video 1",
     thumbnail: "https://img.youtube.com/vi/QqYSqYv--Oo/hqdefault.jpg",
     url: "https://www.youtube.com/embed/QqYSqYv--Oo?si=hReQCoBDlAa1YQI1"
   },
   {
-    id: 4,
+    id: 9,
     title: "Video 2",
     thumbnail: "https://img.youtube.com/vi/xZLI0W_hYT8/hqdefault.jpg",
     url: "https://www.youtube.com/embed/xZLI0W_hYT8?si=wKhKHLnvgsrKLIhL"
   },
   {
-    id: 5,
+    id: 10,
     title: "Video 3",
     thumbnail: "https://img.youtube.com/vi/5eO6dLjiGXU/hqdefault.jpg",
     url: "https://www.youtube.com/embed/5eO6dLjiGXU?si=wbW20z-IS3RSnzxb"
