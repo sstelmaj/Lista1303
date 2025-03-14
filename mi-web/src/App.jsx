@@ -1,5 +1,7 @@
 import React from 'react';
 import {motion} from "framer-motion"
+import { Analytics } from "@vercel/analytics/react"
+
 
 import FadeImage from "./components/FadeImage.jsx";
 import ImageCarousel from "./components/CarruselImagenes.jsx";
@@ -14,6 +16,7 @@ import "slick-carousel/slick/slick-theme.css";
 function App() {
     return (
             <main >
+                <Analytics />
                 {/* Imagen principal */}
                 <div className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 w-16 h-16 sm:w-20 sm:h-20 rounded-full shadow-lg border-2 border-white bg-white p-1 z-50 max-w-full">
                     <img src="/logoLista.jpeg" alt="Logo Lista" className="w-full h-full object-cover rounded-full" />
