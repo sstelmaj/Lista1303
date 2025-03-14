@@ -4,34 +4,68 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 const videos = [
+  //Videos 14/03/25
+  {
+    id: 1,
+    title: "El impacto de cada decisión",
+    thumbnail: "https://img.youtube.com/vi/4gofTFdpvY4/hqdefault.jpg",
+    url: "https://www.youtube.com/embed/4gofTFdpvY4"
+  },
+  {
+    id: 2,
+    title: "El gobierno debe ser claro con el ciudadano ",
+    thumbnail: "https://img.youtube.com/vi/TlkdSJDleh8/hqdefault.jpg",
+    url: "https://www.youtube.com/embed/TlkdSJDleh8"
+  },
+  {
+    id: 3,
+    title: "El rol de la intendencia ",
+    thumbnail: "https://img.youtube.com/vi/0kZyzj3bbEM/hqdefault.jpg",
+    url: "https://www.youtube.com/embed/0kZyzj3bbEM"
+  },
+  {
+    id: 4,
+    title: "La intendencia como generadora de oportunidades",
+    thumbnail: "https://img.youtube.com/vi/D_9qDzWu5RQ/hqdefault.jpg",
+    url: "https://www.youtube.com/embed/D_9qDzWu5RQ"
+  },
+  {
+    id: 5,
+    title: "La importancia de los municipios",
+    thumbnail: "https://img.youtube.com/vi/DwPFxriRNbQ/hqdefault.jpg",
+    url: "https://www.youtube.com/embed/DwPFxriRNbQ"
+  },
+  
+
+  // ---------------------------------------------------------------------------------------
 
   //Videos 10/03/25
   {
-    id: 1,
+    id: 6,
     title: "Intendente Mario Diaz",
     thumbnail: "https://img.youtube.com/vi/Kc3FJwpFKHA/hqdefault.jpg",
     url: "https://www.youtube.com/embed/Kc3FJwpFKHA"
   },
   {
-    id: 2,
+    id: 7,
     title: "Nuestro proyecto político",
     thumbnail: "https://img.youtube.com/vi/f1fqZ1Y8Mpc/hqdefault.jpg",
     url: "https://www.youtube.com/embed/f1fqZ1Y8Mpc"
   },
   {
-    id: 3,
+    id: 8,
     title: "¿Dónde van los fondos de Paysandú?",
     thumbnail: "https://img.youtube.com/vi/7Ad-u2gP9UM/hqdefault.jpg",
     url: "https://www.youtube.com/embed/7Ad-u2gP9UM"
   },
   {
-    id: 4,
+    id: 9,
     title: "¿Qué necesitamos los sanduceros?",
     thumbnail: "https://img.youtube.com/vi/dkdUFePIOsI/hqdefault.jpg",
     url: "https://www.youtube.com/embed/dkdUFePIOsI"
   },
   {
-    id: 5,
+    id: 10,
     title: "¿Qué queremos hacer?",
     thumbnail: "https://img.youtube.com/vi/lnZ--IB8O_8/hqdefault.jpg",
     url: "https://www.youtube.com/embed/lnZ--IB8O_8"
@@ -39,32 +73,32 @@ const videos = [
   // ---------------------------------------------------------------------------------------
 
   {
-    id: 6,
+    id: 11,
     title: "¿Que necesita Paysandú?",
     thumbnail: "https://img.youtube.com/vi/yWqFxp_6jFo/hqdefault.jpg",
     url: "https://www.youtube.com/embed/yWqFxp_6jFo?si=75dZxH4X9Qw7wePB"
   },
   {
-    id: 7,
+    id: 12,
     title: "Presupuesto participativo",
     thumbnail: "https://img.youtube.com/vi/X6LRoHMp7ww/hqdefault.jpg",
     url: "https://www.youtube.com/embed/X6LRoHMp7ww"
   },
   
   {
-    id: 8,
+    id: 13,
     title: "Video 1",
     thumbnail: "https://img.youtube.com/vi/QqYSqYv--Oo/hqdefault.jpg",
     url: "https://www.youtube.com/embed/QqYSqYv--Oo?si=hReQCoBDlAa1YQI1"
   },
   {
-    id: 9,
+    id: 14,
     title: "Video 2",
     thumbnail: "https://img.youtube.com/vi/xZLI0W_hYT8/hqdefault.jpg",
     url: "https://www.youtube.com/embed/xZLI0W_hYT8?si=wKhKHLnvgsrKLIhL"
   },
   {
-    id: 10,
+    id: 15,
     title: "Video 3",
     thumbnail: "https://img.youtube.com/vi/5eO6dLjiGXU/hqdefault.jpg",
     url: "https://www.youtube.com/embed/5eO6dLjiGXU?si=wbW20z-IS3RSnzxb"

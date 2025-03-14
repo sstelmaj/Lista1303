@@ -87,7 +87,7 @@ function App() {
                             Queremos que el próximo intendente esté en consonancia con el gobierno que elegimos todos los Uruguayos el Noviembre pasado, que las políticas sociales y económicas favorezcan a los más necesitados, que el dinero público sea para todos y no para el aprovechamiento de algunos pocos, como ha sido hasta ahora. <br /> <br /> 
                             Recordando que fuimos, somos y seremos una fuerza constructora. <br /> <br /> 
                             Hasta la victoria siempre ✊ <br /> <br /> 
-                            Esta es la hora de los pueblos conscientes y organizados 🌍  <br /> 
+                            Esta es la hora de los pueblos conscientes y organizados <br /> 
                         </p>
                     </motion.div>
                 </div>
