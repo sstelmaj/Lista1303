@@ -9,7 +9,7 @@ import actividad3 from "../assets/actividad3.jpeg";
 import actividad4 from "../assets/actividad4.jpeg";
 import actividad5 from "../assets/actividad07-03-25.jpeg";
 import actividad6 from "../assets/actividad10-3.jpeg";
-import actividad7 from "../assets/actividad18-03.jpeg"
+import actividad7 from "../assets/Actividad18-03.jpeg"
 
 export default function Actividades() {
   const [isModalOpen, setIsModalOpen] = useState(false);
