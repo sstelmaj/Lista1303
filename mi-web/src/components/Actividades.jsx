@@ -9,6 +9,7 @@ import actividad3 from "../assets/actividad3.jpeg";
 import actividad4 from "../assets/actividad4.jpeg";
 import actividad5 from "../assets/actividad07-03-25.jpeg";
 import actividad6 from "../assets/actividad10-3.jpeg";
+import actividad7 from "../assets/actividad18-03.jpeg"
 
 export default function Actividades() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -17,41 +18,48 @@ export default function Actividades() {
   const actividades = [
     {
       id: 1,
+      titulo: "Agenda de esta semana",
+      fecha: "18, 19, 20 y 21 de Marzo 2025",
+      descripcion: "Concentraciones con los vecinos de diferentes barrios. Te esperamos !",
+      imagen: actividad6,
+    },
+    {
+      id: 2,
       titulo: "De frente mano a mano con la gente",
       fecha: "11, 12, 13 y 14 de Marzo 2025",
       descripcion: "Un encuentro con los vecinos de diferentes barrios.",
       imagen: actividad6,
     },
     {
-      id: 2,
+      id: 3,
       titulo: "De frente mano a mano con la gente",
       fecha: "06 de Marzo, 07 de Marzo, 08 de Marzo 2025",
       descripcion: "Un encuentro para conocer la lista y sus propuestas.",
       imagen: actividad5,
     },
     {
-      id: 3,
+      id: 4,
       titulo: "Jornada de militancia",
       fecha: "20, 21 y 22 de Febrero, 2025",
       descripcion: "Un encuentro para conocer la lista y sus propuestas.",
       imagen: actividad1,
     },
     {
-      id: 4,
+      id: 5,
       titulo: "Jornada de militancia",
       fecha: "22 de Febrero, 2025",
       descripcion: "Un encuentro para conocer la lista y sus propuestas.",
       imagen: actividad2,
     },
     {
-      id: 5,
+      id: 6,
       titulo: "Jornada de militancia",
       fecha: "24 de Febrero, 2025",
       descripcion: "Un encuentro para conocer la lista y sus propuestas.",
       imagen: actividad3,
     },
     {
-      id: 6,
+      id: 7,
       titulo: "Abrimos las puertas de la casa a todos",
       fecha: "26 de Febrero, 2025",
       descripcion: "Inauguramos nuestro lugar de encuentro, reflexión y militancia.",

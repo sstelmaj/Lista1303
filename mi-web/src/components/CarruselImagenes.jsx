@@ -19,7 +19,14 @@ import imagen12 from "../assets/imagen3-3(6).jpeg"
 import imagen13 from "../assets/imagen3-3(7).jpeg"
 import imagen14 from "../assets/imagen3-3(8).jpeg"
 
-const images = [imagen7, imagen8, imagen9, imagen10, imagen11, imagen12, imagen13, imagen14, imagen1, imagen2, imagen3, imagen4, imagen5, imagen6];
+import imagen15 from "../assets/foto(1)18-03.jpeg"
+import imagen16 from "../assets/foto(2)18-03.jpeg"
+import imagen17 from "../assets/foto(3)18-03.jpeg"
+import imagen18 from "../assets/foto(4)18-03.jpeg"
+import imagen19 from "../assets/foto(5)18-03.jpeg"
+import imagen20 from "../assets/foto(6)18-03.jpeg"
+
+const images = [imagen15, imagen16, imagen17, imagen18, imagen19, imagen20, imagen7, imagen8, imagen9, imagen10, imagen11, imagen12, imagen13, imagen14, imagen1, imagen2, imagen3, imagen4, imagen5, imagen6];
 
 export default function SidebarCarousel() {
   const [isModalOpen, setIsModalOpen] = useState(false);
