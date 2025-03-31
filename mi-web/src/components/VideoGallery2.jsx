@@ -6,26 +6,26 @@ import "slick-carousel/slick/slick-theme.css";
 const videos = [
     //Videos 31/03/25
     {
-        id: 1,
-        title: "Compromiso en acción: transformando espacios",
+      id: 1,
+      title: "Compromiso en acción: encuentro con las personas",
+      thumbnail: "https://img.youtube.com/vi/WsQAckAq7tk/hqdefault.jpg",
+      url: "https://www.youtube.com/embed/WsQAckAq7tk"
+    },
+    {
+        id: 2,
+        title: "Compromiso en acción: transformando espacios 1",
         thumbnail: "https://img.youtube.com/vi/qjHMDBKPPo4/hqdefault.jpg",
         url: "https://www.youtube.com/embed/qjHMDBKPPo4"
     },
     {
-        id: 2,
-        title: "Compromiso en acción: encuentro con las personas",
-        thumbnail: "https://img.youtube.com/vi/WsQAckAq7tk/hqdefault.jpg",
-        url: "https://www.youtube.com/embed/WsQAckAq7tk"
-    },
-    {
         id: 3,
-        title: "Compromiso en acción: transformando espacios",
+        title: "Compromiso en acción: transformando espacios 2",
         thumbnail: "https://img.youtube.com/vi/j_iVCVF3SC8/hqdefault.jpg",
         url: "https://www.youtube.com/embed/j_iVCVF3SC8"
     },
     {
         id: 4,
-        title: "Compromiso en acción: transformando espacios",
+        title: "Compromiso en acción: transformando espacios 3",
         thumbnail: "https://img.youtube.com/vi/MTSb0O2ALU4/hqdefault.jpg",
         url: "https://www.youtube.com/embed/MTSb0O2ALU4"
     },
