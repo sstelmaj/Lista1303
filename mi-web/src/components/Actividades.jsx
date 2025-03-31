@@ -13,11 +13,20 @@ import actividad7 from "../assets/actividad18-03.jpeg";
 
 import actividad8 from "../assets/actividad24-03.jpeg";
 
+import actividad9 from "../assets/actividad31-03.jpeg";
+
 export default function Actividades() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedImage, setSelectedImage] = useState(null);
 
   const actividades = [
+    {
+      id: 1,
+      titulo: "Agenda semanal",
+      fecha: "31 de Marzo, 01, 02, 03 y 04 de Abril 2025",
+      descripcion: "Por los barrios mano a mano con la gente !",
+      imagen: actividad9,
+    },
     {
       id: 2,
       titulo: "Agenda semanal",
@@ -26,49 +35,49 @@ export default function Actividades() {
       imagen: actividad8,
     },
     {
-      id: 2,
+      id: 3,
       titulo: "Agenda de esta semana",
       fecha: "18, 19, 20 y 21 de Marzo 2025",
       descripcion: "Concentraciones con los vecinos de diferentes barrios. Te esperamos !",
       imagen: actividad7,
     },
     {
-      id: 3,
+      id: 4,
       titulo: "De frente mano a mano con la gente",
       fecha: "11, 12, 13 y 14 de Marzo 2025",
       descripcion: "Un encuentro con los vecinos de diferentes barrios.",
       imagen: actividad6,
     },
     {
-      id: 4,
+      id: 5,
       titulo: "De frente mano a mano con la gente",
       fecha: "06 de Marzo, 07 de Marzo, 08 de Marzo 2025",
       descripcion: "Un encuentro para conocer la lista y sus propuestas.",
       imagen: actividad5,
     },
     {
-      id: 5,
+      id: 6,
       titulo: "Jornada de militancia",
       fecha: "20, 21 y 22 de Febrero, 2025",
       descripcion: "Un encuentro para conocer la lista y sus propuestas.",
       imagen: actividad1,
     },
     {
-      id: 6,
+      id: 7,
       titulo: "Jornada de militancia",
       fecha: "22 de Febrero, 2025",
       descripcion: "Un encuentro para conocer la lista y sus propuestas.",
       imagen: actividad2,
     },
     {
-      id: 7,
+      id: 8,
       titulo: "Jornada de militancia",
       fecha: "24 de Febrero, 2025",
       descripcion: "Un encuentro para conocer la lista y sus propuestas.",
       imagen: actividad3,
     },
     {
-      id: 8,
+      id: 9,
       titulo: "Abrimos las puertas de la casa a todos",
       fecha: "26 de Febrero, 2025",
       descripcion: "Inauguramos nuestro lugar de encuentro, reflexión y militancia.",

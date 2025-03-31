@@ -1,12 +1,16 @@
 import React from 'react';
 import {motion} from "framer-motion"
 import { Analytics } from "@vercel/analytics/react"
+import { useState, useRef } from "react";
 
 
 import FadeImage from "./components/FadeImage.jsx";
 import ImageCarousel from "./components/CarruselImagenes.jsx";
 import VideoGallery from "./components/VideoGallery";
+import VideoGallery2 from "./components/VideoGallery2";
 import Actividades from './components/Actividades.jsx';
+
+import jingleVideo from "./assets/Jingle.mp4"; // Importación correcta del video
 
 import imagen from "./assets/intendenteMarioDiaz.jpeg";
 import "slick-carousel/slick/slick.css";
@@ -14,6 +18,20 @@ import "slick-carousel/slick/slick-theme.css";
 
 
 function App() {
+    const audioRef = useRef(null);
+    const [isPlaying, setIsPlaying] = useState(false);
+
+    const togglePlay = () => {
+        if (audioRef.current) {
+            if (isPlaying) {
+                audioRef.current.pause();
+            } else {
+                audioRef.current.play();
+            }
+            setIsPlaying(!isPlaying);
+        }
+    }
+
     return (
             <main >
                 <Analytics />
@@ -35,13 +53,24 @@ function App() {
                 </div>
 
                 <div className="bg-[rgb(30,41,59)] w-[95%] max-w-[900px] p-4 sm:p-8 rounded-2xl my-4 sm:my-10 mx-auto flex flex-col items-center text-center overflow-hidden">
+                    <motion.div className="flex flex-col items-center mt-6"
+                    initial={{opacity: 0, translateY: "10%"}}
+                    whileInView={{opacity: 1, translateY: 0, transition: {duration: 1}
+                    }}>
+                        <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-white text-center mt-5 font-medium">Para volver a creer 🎶✊ </p>
+                        <video className="w-full max-w-lg rounded-lg shadow-lg m-10" controls>
+                            <source src={jingleVideo} type="video/mp4" />
+                            Tu navegador no soporta la reproducción de videos.
+                        </video>
+                    </motion.div>
+                    
                     <motion.div
                     initial={{opacity: 0, translateY: "10%"}}
                     whileInView={{opacity: 1, translateY: 0, transition: {duration: 1}
                     }}
                     >
                         <p className='text-2xl sm:text-4xl text-white text-center sm:p-10 mt-5 font-medium'>
-                          🏛️ ¿Quiénes somos?
+                          ¿Quiénes somos? 🏛️ 
                         </p>
                         <p className='text-lg sm:text-xl md:text-2xl lg:text-3xl text-white text-center mt-5 font-medium'>
                             Somos una lista que respalda al compañero Mario Díaz como candidato a la intendencia de Paysandú el próximo 11 de Mayo de 2025. <br /> <br />
@@ -55,7 +84,7 @@ function App() {
                     whileInView={{opacity: 1, translateY: 0, transition: {duration: 1}
                     }}>
                         <p className="text-2xl sm:text-4xl text-white text-center font-medium">
-                            🤝 Conócenos
+                            Conócenos 🤝 
                         </p>
                         <ImageCarousel/>
                     </motion.div>
@@ -64,10 +93,22 @@ function App() {
                     initial={{opacity: 0, translateY: "10%"}}
                     whileInView={{opacity: 1, translateY: 0, transition: {duration: 1}
                     }}>
-                        <p className="text-2xl sm:text-4xl text-white text-center font-medium">
-                          🎥 Videos
+                        <p className="text-2xl sm:text-4xl text-white text-center font-medium mb-10">
+                          Videos 🎥
+                        </p>
+                        <p className="text-xl sm:text-2xl text-white text-center font-medium">
+                            Palabras de Mario Díaz
                         </p>
                         <VideoGallery />
+                    </motion.div>
+                    <motion.div className="w-full max-w-full"
+                    initial={{opacity: 0, translateY: "10%"}}
+                    whileInView={{opacity: 1, translateY: 0, transition: {duration: 1}
+                    }}>
+                        <p className="text-xl sm:text-2xl text-white text-center font-medium">
+                          Nuestro equipo
+                        </p>
+                        <VideoGallery2 />
                     </motion.div>
                     <hr className="my-6 sm:my-10 border-t-2 border-gray-700 mx-auto w-3/4" />
                     <motion.div className="w-full max-w-full"
@@ -83,7 +124,7 @@ function App() {
                     whileInView={{opacity: 1, translateY: 0, transition: {duration: 1}
                     }}>
                         <p className='text-2xl sm:text-4xl text-white text-center sm:p-10 font-medium'>
-                            📢 Más
+                            Más 📢
                         </p>
                         <p className='text-lg sm:text-xl md:text-2xl lg:text-3xl text-white text-center p-4 sm:p-10 mt-5 font-medium'>
                             Como consigna, queremos volver a creer y disfrutar de representantes que tengan, como valores fundamentales, trabajar para la gente de nuestro departamento, con honestidad y con propuestas que ayuden a recuperar un departamento muy golpeado. Uno que, en los últimos 5 años, se dedicó́ a realizar obras que no han ayudado a la mayoría de la gente de nuestro territorio, y el cual se vio afectado de muchas maneras, una de ellas, es la falta de oportunidades laborales dignas, siendo las que existen, de baja calidad y pobre remuneración. <br /> <br /> 

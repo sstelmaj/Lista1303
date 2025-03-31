@@ -4,7 +4,6 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 const videos = [
-
   //Video 18/03/25
   {
     id: 2,
@@ -98,22 +97,16 @@ const videos = [
   
   {
     id: 15,
-    title: "Video 1",
+    title: "Primera etapa de la campaña",
     thumbnail: "https://img.youtube.com/vi/QqYSqYv--Oo/hqdefault.jpg",
     url: "https://www.youtube.com/embed/QqYSqYv--Oo?si=hReQCoBDlAa1YQI1"
   },
   {
     id: 16,
-    title: "Video 2",
+    title: "¿Qué debemos mejorar?",
     thumbnail: "https://img.youtube.com/vi/xZLI0W_hYT8/hqdefault.jpg",
     url: "https://www.youtube.com/embed/xZLI0W_hYT8?si=wKhKHLnvgsrKLIhL"
   },
-  {
-    id: 17,
-    title: "Video 3",
-    thumbnail: "https://img.youtube.com/vi/5eO6dLjiGXU/hqdefault.jpg",
-    url: "https://www.youtube.com/embed/5eO6dLjiGXU?si=wbW20z-IS3RSnzxb"
-  }
 ];
 
 export default function VideoGallery() {

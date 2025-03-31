@@ -29,7 +29,10 @@ import imagen20 from "../assets/foto(6)18-03.jpeg"
 import imagen21 from "../assets/imagen24-03(2).jpeg"
 import imagen22 from "../assets/imagen24-03.jpeg"
 
-const images = [imagen22, imagen21, imagen15, imagen16, imagen17, imagen18, imagen19, imagen20, imagen7, imagen8, imagen9, imagen10, imagen11, imagen12, imagen13, imagen14, imagen1, imagen2, imagen3, imagen4, imagen5, imagen6];
+import imagen23 from "../assets/imagen31-03(1).jpeg"
+import imagen24 from "../assets/imagen31-03(2).jpeg"
+
+const images = [imagen23, imagen24, imagen22, imagen21, imagen15, imagen16, imagen17, imagen18, imagen19, imagen20, imagen7, imagen8, imagen9, imagen10, imagen11, imagen12, imagen13, imagen14, imagen1, imagen2, imagen3, imagen4, imagen5, imagen6];
 
 export default function SidebarCarousel() {
   const [isModalOpen, setIsModalOpen] = useState(false);
