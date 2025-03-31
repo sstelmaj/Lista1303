@@ -4,7 +4,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 const videos = [
-    //Videos 31/03/25
+    //Videos 31/03/25 -------------------------
     {
       id: 1,
       title: "Compromiso en acción: encuentro con las personas",
