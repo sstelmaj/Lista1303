@@ -15,11 +15,20 @@ import actividad8 from "../assets/actividad24-03.jpeg";
 
 import actividad9 from "../assets/actividad31-03.jpeg";
 
+import actividad10 from "../assets/actividad07-04.jpeg";
+
 export default function Actividades() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedImage, setSelectedImage] = useState(null);
 
   const actividades = [
+    {
+      id: 1,
+      titulo: "Agenda semanal Abril",
+      fecha: "07, 08, 09, 10 y 11 de Abril 2025",
+      descripcion: "Por los barrios mano a mano con la gente !",
+      imagen: actividad10,
+    },
     {
       id: 1,
       titulo: "Agenda semanal",

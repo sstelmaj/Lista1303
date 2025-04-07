@@ -7,7 +7,7 @@ const videos = [
     //Videos 31/03/25 -------------------------
     {
       id: 1,
-      title: "Compromiso en acción: encuentro con las personas",
+      title: "Compromiso en acción: encuentro con la gente",
       thumbnail: "https://img.youtube.com/vi/WsQAckAq7tk/hqdefault.jpg",
       url: "https://www.youtube.com/embed/WsQAckAq7tk"
     },
