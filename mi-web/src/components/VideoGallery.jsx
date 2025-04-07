@@ -4,6 +4,14 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 const videos = [
+  //Video 07/04/25
+  {
+    id: 1,
+    title: "La realidad de Paysandú",
+    thumbnail: "https://img.youtube.com/vi/hljOR_ze0DM/hqdefault.jpg",
+    url: "https://www.youtube.com/embed/hljOR_ze0DM"
+  },
+
   //Video 18/03/25
   {
     id: 2,
